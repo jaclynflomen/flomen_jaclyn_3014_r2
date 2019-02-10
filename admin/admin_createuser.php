@@ -13,8 +13,7 @@ if(isset($_POST['submit'])){
     $email = trim($_POST['email']);
 
     $chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
-    $password = substr(str_shuffle($chars), 0, 7);
-    // $password = sha1(substr(str_shuffle($chars), 0, 7));
+    $password = sha1(substr(str_shuffle($chars), 0, 7));
 
     // Validation
     if(empty($username) || empty($email)){
