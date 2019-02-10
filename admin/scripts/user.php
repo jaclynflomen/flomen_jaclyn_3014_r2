@@ -3,6 +3,7 @@
 function createUser($fname, $username, $password, $email) {
     include('connect.php');
 
+    
     //TODO: Check if yser exists already
     //if yes, return a message right away
     //otherwise go with the following logics
@@ -12,8 +13,6 @@ function createUser($fname, $username, $password, $email) {
     //user_name = $username
     //user_pass = $password
     //user_email = $email
-
-    
 
     $create_user_query = 'INSERT INTO tbl_user (user_fname, user_name, user_pass, user_email) VALUES (:fname, :username, :password, :email)';
 
